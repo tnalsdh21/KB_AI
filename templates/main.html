@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<title>KB AI</title>
+		<link
+			href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css"
+			rel="stylesheet"
+			integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9"
+			crossorigin="anonymous"
+		/>
+	</head>
+	<body>
+		<div class="d-flex justify-content-center">
+			<h1>마케팅 문자 생성AI</h1>
+		</div>
+		<div class="container-sm" style="background-color: bisque">
+			<form action="{{url_for('get_question')}}" method="post" class="chat-form">
+				<div class="chat-input">
+					<!-- <label for="name">Enter your name: </label> -->
+					<div class="mb-3">
+						<label for="questionLabel" class="form-label">
+							질문을 입력하세요</label
+						>
+						<textarea
+							class="form-control"
+							id="question"
+							rows="3"
+						></textarea>
+						<div class="d-flex justify-content-center">
+							<input type="submit" value="입력" class="btn btn-primary" />
+						</div>
+					</div>
+				</div>
+				<br />
+				<div class="chat-output" style="background-color: aqua">
+                    {{ answer }}
+					브라우저의 기본 체크 박스와 라디오 버튼은 .form-check의 도움을 받아
+					대체할 수 있습니다. 이는 두 입력 유형을 위한 클래스로, HTML 요소의
+					레이아웃과 동작을 개선하여 보다 높은 맞춤성과 크로스 브라우저의
+					일관성을 제공합니다. 체크 박스는 목록 중 하나 또는 여러 개를 선택하고,
+					라디오 버튼은 여러 목록 중 하나를 선택하는 것입니다.
+				</div>
+				<br />
+			</form>
+		</div>
+		<div class="container-sm" style="background-color: lightgray">
+			<div class="d-flex justify-content-center">
+				<input type="submit" value="다시하기" class="btn btn-secondary" />
+			</div>
+		</div>
+	</body>
+
+	<script
+		src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
+		integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"
+		crossorigin="anonymous"
+	></script>
+</html>
