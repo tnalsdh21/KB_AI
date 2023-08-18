@@ -25,19 +25,19 @@ model2.eval()
 
 # 위에 모델만 받아와서 여기에서 살짝 학습시켜야한답니다,,,
 
-def gen(x):
-  q = f"### 질문: {x}\n\n### 답변:"
-  # print(q)
-  gened = model2.generate(
-    **tokenizer(
-      q,
-      return_tensors='pt',
-      return_token_type_ids=False
-    ).to('cuda'),
-    max_new_tokens=512,
-    early_stopping=True,
-    do_sample=True,
-    eos_token_id=2,
-  )
+# def gen(x):
+#   q = f"### 질문: {x}\n\n### 답변:"
+#   # print(q)
+#   gened = model2.generate(
+#     **tokenizer(
+#       q,
+#       return_tensors='pt',
+#       return_token_type_ids=False
+#     ).to('cuda'),
+#     max_new_tokens=512,
+#     early_stopping=True,
+#     do_sample=True,
+#     eos_token_id=2,
+#   )
   # print(tokenizer.decode(gened[0]))
-  return tokenizer.decode(gened[0])
+#   return tokenizer.decode(gened[0])
